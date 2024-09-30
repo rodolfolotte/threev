@@ -48,6 +48,18 @@ The solution were adapted to local instance with a different and simpler approac
 
 > Nonetheless, the local GPU got `torch.OutOfMemoryError: CUDA out of memory` errors that was not completely solved.
 
+### Related links
+
+GPU
+- https://github.com/pytorch/pytorch/issues/16417
+
+Ultralytics
+- https://docs.ultralytics.com/modes/predict/#masks
+- https://docs.ultralytics.com/pt/tasks/segment/#models
+- https://github.com/ultralytics/yolov5/issues/1497
+- https://www.digitalocean.com/community/tutorials/train-yolov7-custom-data
+- 
+
 ## UNet architecture
 Another approach attempt to this solution was the use of UNet architecture, which was originally built on top of a need to segment x-ray images. UNet also fits to this resolution due to its ability to perceive tiny details over targets edges. However, only YOLOv8 was considered in this exam.
 
@@ -88,3 +100,6 @@ curl -X POST http://localhost:5000/predict \
 ```
 
 > A lot of issues with the `segmented_image.jpg` remains for this assessment, i.e. the image uploading to the Docker Container Flask app is correct, but something with the blobs response seems unsolved. The predicted image returns empty.
+
+### Related links
+- https://stackoverflow.com/questions/64369017/flask-send-image-with-curl-as-json-payload
